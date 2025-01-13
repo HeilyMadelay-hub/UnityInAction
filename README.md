@@ -106,7 +106,7 @@ El objetivo principal es proporcionar un espacio donde diferentes tipos de usuar
 
 ---
 
-## 🛠️ Problemas Conocidos
+## 🛠️ Problemas Conocidos En La Primera Version 
 - Diseño de base de datos con limitaciones de integridad.
 - Lógica de negocio acoplada a la vista.
 - Validaciones rígidas y faltas de control de errores.
