@@ -125,3 +125,65 @@ Este proyecto no cuenta con una licencia específica. Se presenta como código a
 
 ---
 
+## 💻 **Tecnologías Utilizadas**  
+
+### **Frontend**  
+- **Lenguaje:**
+  - **Java** (Principal lenguaje de desarrollo para aplicaciones Android en este proyecto).
+- **Diseño de Interfaz:**
+  - **XML** para la definición de layouts.
+  - **Material Design** para garantizar una interfaz de usuario moderna, accesible y estandarizada.
+  - **Tema Oscuro** implementado con las directrices de Material Design para mejorar la experiencia del usuario.
+
+### **Backend y Base de Datos**
+- **Firebase** (Solución integral para backend):  
+  - **Firebase Authentication**:
+    - Autenticación de usuarios con correo/contraseña, Google, o Facebook.
+  - **Firebase Realtime Database** o **Firebase Firestore**:
+    - Almacenamiento en tiempo real para gestionar usuarios, noticias y donaciones.
+  - **Firebase Storage**:
+    - Almacenamiento de archivos, como imágenes para las noticias o perfiles de usuario.
+  - **Firebase Cloud Functions**:
+    - Para lógica de negocio como notificaciones automáticas al subir una noticia o realizar una donación.
+  - **Firebase Hosting** *(opcional)*:
+    - Almacenamiento de recursos estáticos o integración con APIs REST si el proyecto evoluciona.
+  - **Firebase Analytics**:
+    - Seguimiento de uso de la app para optimizar funcionalidades basadas en datos reales.
+
+### **Notificaciones Push**  
+- **Firebase Cloud Messaging (FCM)**:
+  - Notificaciones en tiempo real para alertar a los usuarios sobre eventos como nuevas noticias, actualizaciones importantes o confirmaciones de donación.
+
+### **Pagos**
+1. **Pasarela de Pago Simulada (para desarrollo)**:
+   - Durante el desarrollo, los pagos serán simulados, validando los datos de tarjetas de crédito, CVV y fechas de caducidad, sin realizar transacciones reales.
+   - Se usará una lógica local para simular el pago exitoso basado en la validez de los datos.
+
+2. **Pasarela de Pago Real (Preparada para producción)**:
+   - **Stripe** (para integración futura):
+     - Integración del SDK de Stripe en el proyecto, utilizando el entorno de pruebas **(modo sandbox)**.
+     - **Costo por transacción en producción**: **2.9% + $0.30 USD** por transacción.
+
+   - **Beneficios**:
+     - La lógica de pagos está completamente preparada para recibir pagos reales cuando sea necesario, sin necesidad de rehacer la integración al momento de lanzarlo.
+
+### **Herramientas de Desarrollo**  
+- **Android Studio**:
+  - IDE principal para el desarrollo y depuración de la aplicación.
+- **Gradle**:
+  - Gestión de dependencias y compilación del proyecto.
+
+### **Pruebas**
+- **Espresso**:
+  - Para pruebas automatizadas de la interfaz de usuario.
+- **JUnit**:
+  - Para pruebas unitarias.
+- **Mockito**:
+  - Para realizar pruebas unitarias simulando dependencias y datos.
+
+### **Control de Versiones**
+- **Git**:
+  - Gestión del código fuente.
+- **GitHub**:
+  - Repositorio para el trabajo colaborativo y versionado.
+
