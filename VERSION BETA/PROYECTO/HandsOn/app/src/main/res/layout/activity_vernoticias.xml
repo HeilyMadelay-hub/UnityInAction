@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="318dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Buscar noticias"
+        android:importantForAccessibility="yes"
+        android:inputType="text"
+        android:paddingHorizontal="16dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+
+    <ImageView
+        android:id="@+id/btnUploadNews"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/rounded_button"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icono" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNoticias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBar"
+        android:layout_above="@id/btnBack"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+
+    <!-- Botón de retroceso -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Volver atrás"
+        android:src="@drawable/flecha" />
+
+</RelativeLayout>
+

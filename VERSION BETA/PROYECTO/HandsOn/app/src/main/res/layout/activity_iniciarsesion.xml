@@ -1,0 +1,87 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+
+    <View
+        android:id="@+id/black_circle"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/circle_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp" />
+
+    <ImageView
+        android:id="@+id/icon_login"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icono"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp" />
+
+
+    <!-- Campo de entrada para el email -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/icon_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background" />
+
+    <!-- Campo de entrada para la contraseña -->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_below="@id/editTextEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerUserType"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/editTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/spinner_background"/>
+
+    <ImageView
+        android:id="@+id/flecha_regresar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:contentDescription="Regresar"
+        android:focusable="true"
+        android:src="@drawable/flecha"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIniciarSesionr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:layout_marginStart="120dp"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/btn_black_3d" />
+
+
+</RelativeLayout>

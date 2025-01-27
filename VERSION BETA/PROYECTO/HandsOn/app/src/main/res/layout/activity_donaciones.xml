@@ -1,0 +1,284 @@
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+
+
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="¿A que organización quieres ayudar?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <EditText
+        android:id="@+id/editTextOrganizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:ems="20"
+        android:inputType="text"
+        android:hint="Nombre de la organizacion"
+        android:layout_below="@id/appTitleTextView"
+        android:layout_centerHorizontal="false" />
+
+    <TextView
+        android:id="@+id/appFechaDonacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Fecha de la donación:"
+        android:layout_below="@id/editTextOrganizacion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <EditText
+        android:id="@+id/editTextFechaDelDiaDeOrganizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appFechaDonacion"
+        android:ems="20"
+        android:layout_marginTop="-1dp"
+        android:layout_marginStart="25dp"
+        android:hint="Fecha (MM/AA)"
+        android:inputType="date"/>
+
+    <TextView
+        android:id="@+id/appNombreCompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Introduce el nombre completo:"
+        android:layout_below="@+id/editTextFechaDelDiaDeOrganizacion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <!-- EditText de Nombre Completo -->
+    <EditText
+        android:id="@+id/editTextNombreCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appNombreCompleto"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nombre Completo"
+        android:inputType="textPersonName" />
+
+    <!-- EditText de Número de Tarjeta -->
+    <EditText
+        android:id="@+id/editTextNumeroTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appNumTarjeta"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Número de Tarjeta"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/appNumTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Introduce el numero de tarjeta:"
+        android:layout_below="@+id/editTextNombreCompleto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <TextView
+        android:id="@+id/appCVVTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Introduce el CVV:"
+        android:layout_below="@+id/editTextNumeroTarjeta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <EditText
+        android:id="@+id/editTextCVV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appCVVTarjeta"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="CVV"
+        android:inputType="numberPassword" />
+
+    <TextView
+        android:id="@+id/appCVVFechaCaducidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Introduce la fecha de caducidad de la tarjeta:"
+        android:layout_below="@+id/editTextCVV"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <EditText
+        android:id="@+id/editTextFechaCaducidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appCVVFechaCaducidad"
+        android:ems="20"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:hint="Fecha (MM/AA)"
+        android:inputType="date"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/appMetododePago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Selecciona método de pago:"
+        android:layout_below="@+id/editTextFechaCaducidad"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupMetodosPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appMetododePago"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonBizum"
+            android:layout_width="230dp"
+            android:layout_height="59dp"
+            android:text="Bizum"
+            android:drawableStart="@drawable/bizum"
+            android:drawablePadding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMastercard"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:text="Visa"
+            android:drawableStart="@drawable/creditcard"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVisa"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:text="Paypal"
+            android:drawableStart="@drawable/paypal"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/radioGroupMetodosPago"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="70dp">
+
+        <ImageView
+            android:id="@+id/flecha_regresar"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:contentDescription="Regresar"
+            android:focusable="true"
+            android:src="@drawable/flecha"
+            android:layout_marginEnd="5dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDonar"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Donar"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_black_3d" />
+
+
+    </LinearLayout>
+
+
+</android.widget.RelativeLayout>
+

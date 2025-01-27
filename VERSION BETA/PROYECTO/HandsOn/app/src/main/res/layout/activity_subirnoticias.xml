@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/fondo">
+
+    <!-- Contenedor para scroll -->
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Botón para volver atrás -->
+            <ImageView
+                android:id="@+id/btnAtras"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:contentDescription="Regresar"
+                android:focusable="true"
+                android:src="@drawable/flecha"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="-20dp" />
+
+            <!-- Título de la noticia -->
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título de la noticia"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etNombreNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese el título de la noticia"
+                android:layout_marginTop="8dp" />
+
+            <!-- Contenido de la noticia -->
+            <TextView
+                android:id="@+id/tvContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contenido y requisitos:"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etContenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escribe el contenido de la noticia"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:layout_marginTop="4dp" />
+
+            <EditText
+                android:id="@+id/etRequisitos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Requisitos" />
+
+
+            <!-- Lo que se necesita -->
+            <TextView
+                android:id="@+id/tvLoQueSeNecesita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lo que se necesita"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etLoQueSeNecesita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Describe lo que se necesita"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:layout_marginTop="8dp" />
+
+            <!-- Etiquetas -->
+            <TextView
+                android:id="@+id/tvTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tags"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Añade etiquetas con # (ej. #noticia #actualidad)"
+                android:layout_marginTop="8dp" />
+
+            <!-- Subir fotos y videos -->
+            <LinearLayout
+                android:id="@+id/llSubirArchivos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elige el archivo a subir:" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSeleccionarArchivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_black_3d"
+                    android:textColor="@android:color/white"
+                    android:text="Seleccionar archivo"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/tvArchivoSeleccionado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ningún archivo seleccionado"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Datos del remitente -->
+            <TextView
+                android:id="@+id/tvDatosRemitente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datos de quien sube la noticia"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etNombreRemitente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etApellidoRemitente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellido"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etDniRemitente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                android:inputType="number"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etTelefonoRemitente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de teléfono"
+                android:inputType="phone"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etLugarVivienda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lugar de donde vive"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etLugarNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lugar donde pasa la noticia"
+                android:layout_marginTop="8dp" />
+
+            <!-- Contenedor para los botones -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="100dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_black_3d"
+                    android:textColor="@android:color/white"
+                    android:text="Subir"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDescartar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_black_3d"
+                    android:textColor="@android:color/white"
+                    android:text="Descartar" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

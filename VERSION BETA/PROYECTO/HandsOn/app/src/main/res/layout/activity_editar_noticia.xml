@@ -1,0 +1,103 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Botón Atrás -->
+    <ImageView
+        android:id="@+id/btnAtras"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:contentDescription="@string/desc_btn_atras"
+        android:focusable="true"
+        android:src="@drawable/flecha"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Título de la noticia -->
+    <EditText
+        android:id="@+id/etTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/editartitulo"
+        android:inputType="text"
+        android:layout_below="@id/btnAtras"
+        android:layout_marginTop="16dp" />
+
+    <!-- Contenido de la noticia -->
+    <EditText
+        android:id="@+id/etContenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/editarcontenido"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:gravity="top"
+        android:layout_below="@id/etTitulo"
+        android:layout_marginTop="16dp" />
+
+    <!-- Lugar donde pasa la noticia -->
+    <EditText
+        android:id="@+id/etLugar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/hint_lugar"
+        android:inputType="text"
+        android:layout_below="@id/etContenido"
+        android:layout_marginTop="16dp" />
+
+    <!-- Lo que se necesita -->
+    <EditText
+        android:id="@+id/etNecesidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/hint_necesidades"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_below="@id/etLugar"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tags -->
+    <EditText
+        android:id="@+id/etTags"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/editartags"
+        android:inputType="text"
+        android:layout_below="@id/etNecesidades"
+        android:layout_marginTop="16dp" />
+
+    <!-- Subir archivo -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSeleccionarArchivo"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/btn_seleccionar_archivo"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_black_3d"
+        android:layout_below="@id/etTags"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón Actualizar Noticia -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/btn_actualizar"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_black_3d"
+        android:layout_below="@id/btnSeleccionarArchivo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
+
+

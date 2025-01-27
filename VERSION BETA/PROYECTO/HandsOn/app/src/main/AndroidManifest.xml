@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.meicode.handson">
+
+    <!-- Especificaciones del SDK -->
+    <uses-sdk
+        android:minSdkVersion="31"
+        android:targetSdkVersion="34" />
+
+    <!-- Permisos necesarios -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Declaración de la aplicación -->
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="HandsOn"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HandsOn"
+        tools:ignore="HardcodedDebugMode">
+
+        <!-- Actividad principal -->
+        <activity
+            android:name="org.meicode.MenuPrincipal.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Otras actividades -->
+        <activity
+            android:name="org.meicode.MenuPrincipal.ActivityRegistrarse"
+            android:exported="true" />
+        <activity
+            android:name="org.meicode.MenuPrincipal.ActivityIniciar"
+            android:exported="true" />
+        <activity
+            android:name="org.meicode.MenuPrincipal.ActivityVernoticias"
+            android:exported="true" />
+        <activity
+            android:name="org.meicode.MenuPrincipal.ActivityDonaciones"
+            android:exported="true" />
+        <activity
+            android:name="org.meicode.MenuPrincipal.activitysubirnoticias"
+            android:exported="true" />
+
+        <activity android:name="org.meicode.MenuPrincipal.EditarNoticiaActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="org.meicode.MenuPrincipal.ActivityPerfilUsuario"
+            android:exported="true" />
+
+        <!-- Provider para archivos compartidos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>
+
+
+

@@ -1,0 +1,18 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="180"
+    android:toDegrees="250">
+
+    <shape
+        android:shape="rectangle">
+        <size
+            android:width="200dp"
+            android:height="200dp" />
+        <solid android:color="#4CAF50" />
+        <corners
+            android:topLeftRadius="0dp"
+            android:topRightRadius="0dp"
+            android:bottomLeftRadius="0dp"
+            android:bottomRightRadius="150dp" />
+    </shape>
+
+</rotate>

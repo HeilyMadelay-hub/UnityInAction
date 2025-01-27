@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/fondo">
+
+    <!-- Botón de retroceso -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/flecha"
+        android:contentDescription="Volver atrás"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Imagen del perfil -->
+    <ImageView
+        android:id="@+id/iconosubirfoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/btnBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/iconosubirfoto"
+        android:contentDescription="Foto de perfil"
+        android:scaleType="centerCrop" />
+
+    <!-- Nombre del usuario -->
+    <TextView
+        android:id="@+id/tvUsuarioNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconosubirfoto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Nombre del Usuario"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Email del usuario -->
+    <TextView
+        android:id="@+id/tvUsuarioEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUsuarioNombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="email@example.com"
+        android:textSize="14sp"
+        android:textColor="#666666" />
+
+    <!-- RecyclerView para noticias del usuario -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNoticiasUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tvUsuarioEmail"
+        android:layout_above="@id/btnUploadNews"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical" />
+
+    <!-- Botón para subir noticias -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUploadNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLogout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_black_3d"
+        android:text="Subir Noticias"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp" />
+
+    <!-- Botón para cerrar sesión -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_black_3d"
+        android:text="Cerrar sesión"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp" />
+</RelativeLayout>
+

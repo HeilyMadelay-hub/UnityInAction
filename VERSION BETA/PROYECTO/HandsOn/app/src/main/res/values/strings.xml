@@ -1,0 +1,50 @@
+<resources>
+    <!-- strings.xml -->
+    <string name="app_title">HandsOn</string>
+    <string name="quarter_circle_desc">Cuarto de círculo decorativo</string>
+    <string name="logo_desc">Logo de la aplicación</string>
+    <string name="register_button_text">Registrarse</string>
+    <string name="login_button_text">Iniciar Sesión</string>
+    <string name="view_news_button_text">Ver Noticias</string>
+    <string name="donate_button_text">Donaciones</string>
+
+        <string name="titulo">Título</string>
+        <string name="hint_titulo">Introduce el título</string>
+        <string name="contenido">Contenido</string>
+        <string name="hint_contenido">Introduce el contenido</string>
+        <string name="requisitos">Requisitos</string>
+        <string name="hint_requisitos">Introduce los requisitos</string>
+        <string name="tags">Etiquetas</string>
+        <string name="hint_tags">Introduce etiquetas separadas por comas</string>
+        <string name="guardar">Guardar</string>
+        <string name="cancelar">Cancelar</string>
+
+
+
+    <string-array name="user_types">
+        <item>Organización</item>
+        <item>Reportero Ciudadano</item>
+        <item>Voluntario</item>
+        <item>Profesional</item>
+        <item>Donante</item>
+    </string-array>
+
+    <string-array name="user_typesB">
+        <item>Organización</item>
+        <item>Reportero Ciudadano</item>
+        <item>Voluntario</item>
+        <item>Profesional</item>
+    </string-array>
+
+
+        <string name="desc_btn_atras">Regresar</string>
+        <string name="editartitulo">Título</string>
+        <string name="editarcontenido">Contenido</string>
+        <string name="hint_lugar">Lugar</string>
+        <string name="hint_necesidades">Necesidades</string>
+        <string name="editartags">Tags</string>
+        <string name="btn_seleccionar_archivo">Seleccionar archivo</string>
+        <string name="btn_actualizar">Actualizar noticia</string>
+
+
+</resources>

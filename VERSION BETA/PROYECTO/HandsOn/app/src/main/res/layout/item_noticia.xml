@@ -1,0 +1,92 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/item_background"
+    android:elevation="4dp">
+
+    <!-- Título de la noticia -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Título de la noticia"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Contenido de la noticia -->
+    <TextView
+        android:id="@+id/tvContenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contenido de la noticia"
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Requisitos de la noticia -->
+    <TextView
+        android:id="@+id/tvRequisitos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Requisitos: "
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Tags de la noticia -->
+    <TextView
+        android:id="@+id/tvTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tags: "
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Autor de la noticia -->
+    <TextView
+        android:id="@+id/tvAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Autor: "
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Botones de acción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="4dp">
+
+        <!-- Botón de editar -->
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/gray"
+            android:paddingHorizontal="12dp"
+            android:elevation="2dp" />
+
+        <!-- Espaciado entre los botones -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/black"
+            android:paddingHorizontal="12dp"
+            android:elevation="2dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Cuarto de círculo en la esquina superior izquierda -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/quarter_circle_top_left" />
+
+    <!-- Logo de la aplicación -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/logo"
+         />
+
+    <!-- Título de la aplicación -->
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="HandsOn"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1" />
+
+    <!-- GridLayout para los botones -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:columnCount="2"
+        app:rowCount="2">
+
+        <!-- Botón de Registrarse -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerButton"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:layout_margin="12dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:background="@drawable/rounded_button"
+            android:padding="20dp"
+            android:text="Registrarse"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+        <!-- Botón de Iniciar Sesión -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:layout_margin="12dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:background="@drawable/rounded_button"
+            android:padding="20dp"
+            android:text="Iniciar Sesión"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <!-- Botón de Ver Noticias -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewNewsButton"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:layout_margin="12dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:background="@drawable/rounded_button"
+            android:padding="20dp"
+            android:text="Ver Noticias"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/donateButton"
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:background="@drawable/rounded_button"
+                android:padding="20dp"
+                android:text="Donaciones"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                 />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Cuarto de círculo en la esquina inferior derecha -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/quarter_circle_bottom_right" />
+
+</RelativeLayout>
+
+
