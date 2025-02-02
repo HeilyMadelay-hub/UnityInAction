@@ -64,10 +64,16 @@ El objetivo principal es proporcionar un espacio donde diferentes tipos de usuar
 - **Noticia** - Modelo de datos para las noticias.
 
 ## 📊 Arquitectura del Proyecto
-Para mejorar la modularidad y la mantenibilidad del código, el proyecto sigue la arquitectura **MVVM (Modelo-Vista-ViewModel)**:
-- **Modelo**: Define los datos y su gestión mediante Firebase o SQLite.
-- **Vista**: Las Activities y Fragments que muestran la información al usuario.
-- **ViewModel**: Maneja la lógica de negocio y la comunicación con el Modelo sin afectar directamente la Vista.
+La aplicación sigue una arquitectura cliente-servidor con los siguientes componentes:
+
+### **Backend (Servidor Remoto)**
+- **Firebase Firestore**: Base de datos NoSQL en la nube para almacenar usuarios, noticias y donaciones.
+- **Firebase Authentication**: Gestión de autenticación de usuarios.
+- **Firebase Cloud Functions**: Lógica de backend para validar donaciones y enviar notificaciones.
+
+### **Frontend (Android)**
+- **Activities y Fragments**: Interfaz de usuario en Java/XML.
+- **SDK de Firebase**: Comunicación con el backend mediante Firestore y Auth.
 
 ## 🔧 Requisitos Previos
 ### Software
