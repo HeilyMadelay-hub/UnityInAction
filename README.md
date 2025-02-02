@@ -148,7 +148,7 @@ Firebase:
 - FCM: Notificaciones push
   
 Pasarela de Pago:
--PayPal API: Procesamiento seguro de donaciones
+- PayPal API: Procesamiento seguro de donaciones
 
 ### Herramientas de Desarrollo
 - Android Studio
