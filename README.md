@@ -8,6 +8,7 @@ El objetivo principal es proporcionar un espacio donde diferentes tipos de usuar
 - Registrarse e iniciar sesión.
 - Publicar y visualizar noticias de interés.
 - Gestionar donaciones para apoyar a Organizaciones.
+- Ofrecerse para realizar voluntariados con las Organizaciones.
 
 ## 🌐 Conectividad
 La aplicación se conecta a servidores remotos de Firebase para:
