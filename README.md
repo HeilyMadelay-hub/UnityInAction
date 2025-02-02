@@ -37,8 +37,11 @@ La aplicación se conecta a servidores remotos de Firebase para:
 - Búsqueda integrada para filtrar noticias por palabras clave.
 
 ### Donaciones
-- Donaciones por parte de usuarios a Organizaciones.
-- Validación de datos de pago: tarjeta de crédito, CVV, fecha de caducidad.
+-Los usuarios pueden realizar donaciones a Organizaciones dentro de la aplicación.
+-Se soporta el pago mediante PayPal, lo que permite realizar transacciones seguras y rápidas.
+-El proceso de pago se realiza a través de la API de PayPal, garantizando la seguridad de la información financiera de los usuarios.
+-Se validan los datos de la transacción antes de confirmar la donación.
+-Confirmación instantánea de la donación con notificaciones en tiempo real.
 
 ### Notificaciones Push
 Integración con Firebase Cloud Messaging para enviar notificaciones cuando:
@@ -143,7 +146,8 @@ Firebase:
 - Cloud Functions: Lógica de servidor
 - Storage: Almacenamiento de archivos
 - FCM: Notificaciones push
-
+Pasarela de Pago:
+-PayPal API: Procesamiento seguro de donaciones
 ### Herramientas de Desarrollo
 - Android Studio
 - Gradle
