@@ -146,8 +146,10 @@ Firebase:
 - Cloud Functions: Lógica de servidor
 - Storage: Almacenamiento de archivos
 - FCM: Notificaciones push
+  
 Pasarela de Pago:
 -PayPal API: Procesamiento seguro de donaciones
+
 ### Herramientas de Desarrollo
 - Android Studio
 - Gradle
