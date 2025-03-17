@@ -139,33 +139,37 @@ Se han implementado pruebas para garantizar el correcto funcionamiento de la apl
 
 1. Detección de Actividad Sospechosa en Inicios de Sesión
    
-   Registro de eventos de login: se guardan datos clave en Firestore (usuario, IP, hora, etc.).
+   Registro de eventos de login: se guardan datos clave en Firestore (usuario, IP, hora).
+   
    Análisis con IA (Cloud Function):
    
-   Una Cloud Function recupera los eventos de login y pasa la información por un modelo 
-   ligero de IA (por ejemplo, TensorFlow Lite o scikit-learn).
-   El modelo determina el nivel de riesgo (bajo, medio o alto) en función de patrones de 
-   comportamiento.
+      Una Cloud Function recupera los eventos de login y pasa la información por un modelo 
+      ligero de IA (por ejemplo, TensorFlow Lite o scikit-learn).
+      El modelo determina el nivel de riesgo (bajo, medio o alto) en función de patrones de 
+      comportamiento.
    
    Medidas de protección:
-   Si se detecta un inicio de sesión de alto riesgo, se activa de forma automática la 
-   autenticación en dos pasos (2FA) o se bloquea temporalmente la cuenta para evitar accesos 
-   no autorizados.
+   
+      Si se detecta un inicio de sesión de alto riesgo, se activa de forma automática la 
+      autenticación en dos pasos (2FA) o se bloquea temporalmente la cuenta para evitar 
+      accesos no autorizados.
 
 3. Filtro de Contenido en Publicaciones
    
-Validación previa de noticias: al subir una nueva noticia, el texto se somete a un modelo básico de NLP (Naive Bayes o Regresión Logística) que evalúa el contenido para detectar spam o lenguaje ofensivo.
+   Validación previa de noticias: al subir una nueva noticia, el texto se somete a un modelo 
+   básico de NLP (Naive Bayes o Regresión Logística) que evalúa el contenido para detectar 
+   spam o lenguaje ofensivo.
    
    Umbral de aceptación:
    
-   Si el resultado del análisis supera un determinado nivel de riesgo, la noticia se marca 
-   para revisión manual
-   
-   Si el índice de spam u ofensividad es muy elevado, se rechaza automáticamente para 
-   proteger la calidad de la plataforma.
-   
-   Este MVP de IA ofrece una protección inicial contra usos maliciosos y se implementa de 
-   forma escalable, permitiendo mejoras futuras con más datos y modelos más sofisticados.
+      Si el resultado del análisis supera un determinado nivel de riesgo, la noticia se marca 
+      para revisión manual
+      
+      Si el índice de spam u ofensividad es muy elevado, se rechaza automáticamente para 
+      proteger la calidad de la plataforma.
+      
+      Este MVP de IA ofrece una protección inicial contra usos maliciosos y se implementa de 
+      forma escalable, permitiendo mejoras futuras con más datos y modelos más sofisticados.
 
 ## 💻 Tecnologías Utilizadas
 
