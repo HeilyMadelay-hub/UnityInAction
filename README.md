@@ -15,43 +15,73 @@ Este README presenta un plan realista para desarrollar la aplicación **en 2.5 m
 - Desarrollar un sistema básico de donaciones
 - Aprender e implementar Firebase como solución backend
 
-## 📅 Cronograma de Desarrollo (2.5 Meses)
+## 📅 Cronograma de Desarrollo (2 Meses)
 
-### 🚀 Fase 1: Base del Proyecto (Semanas 1-2)
-- [  ] Configuración del entorno de desarrollo Android
-- [  ] Creación y configuración del proyecto en Firebase
-- [  ] Diseño de las pantallas principales (mockups/wireframes)
-- [  ] Implementación de Firebase Authentication básico
-- [  ] Desarrollo de interfaces de registro e inicio de sesión
+## 🚀 Semana 1-2: Base del Proyecto
 
-### 👤 Fase 2: Gestión de Usuarios (Semanas 3-5)
-- [  ] Modelado de datos de usuarios en Firestore
-- [  ] Implementación de perfiles para los 5 tipos de usuarios
-- [  ] Desarrollo de la clase FirestoreHelper 
-- [  ] Interfaz de usuario para visualización/edición de perfiles
-- [  ] Testing de las funcionalidades de autenticación
+Configuración entorno Android
 
-### 📰 Fase 3: Sistema de Noticias (Semanas 6-8)
-- [  ] Diseño del modelo de datos para noticias
-- [  ] Desarrollo de la interfaz para crear noticias
-- [  ] Implementación del listado de noticias (RecyclerView + NoticiasAdapter)
-- [  ] Desarrollo de la vista detallada de noticias
-- [  ] Implementación de funcionalidad de búsqueda básica
-- [  ] Testing de las funcionalidades CRUD de noticias
+Creación/configuración Firebase
 
-### 💰 Fase 4: Sistema de Donaciones (Semanas 9-10)
-- [  ] Integración básica con PayPal SDK (ambiente sandbox)
-- [  ] Implementación de la interfaz de donaciones
-- [  ] Desarrollo del flujo de confirmación de donaciones
-- [  ] Almacenamiento del registro de donaciones en Firestore
-- [  ] Testing del proceso de donación
+Mockups básicos de interfaces
 
-### 🔍 Fase 5: Pulido y Finalización (Semana 11)
-- [  ] Revisión general y corrección de bugs
-- [  ] Implementación del tema oscuro
-- [  ] Optimización de rendimiento
-- [  ] Testing final de todas las funcionalidades
-- [  ] Finalización de la documentación
+Firebase Authentication básico
+
+Interfaces registro e inicio sesión
+
+## 👤 Semana 3-4: Gestión Usuarios
+
+Modelado datos usuarios (Firestore)
+
+Perfiles de los 5 tipos de usuario
+
+Clase FirestoreHelper
+
+Interfaz visualización/edición perfil
+
+Testing autenticación y perfiles
+
+## 📰 Semana 5-6: Sistema Noticias
+
+Modelo datos noticias (Firestore)
+
+Interfaz creación noticias
+
+RecyclerView + NoticiasAdapter
+
+Vista detallada de noticias
+
+Funcionalidad búsqueda básica
+
+Testing funcionalidades noticias
+
+## 💰 Semana 7: Sistema Donaciones
+
+Integración PayPal SDK (sandbox)
+
+Interfaz básica donaciones
+
+Flujo confirmación donaciones
+
+Registro donaciones en Firestore
+
+Testing donaciones
+
+## 🔍 Semana 8: Pulido y Finalización
+
+Revisión/corrección bugs
+
+Implementación tema oscuro
+
+Optimización rendimiento
+
+Testing final general
+
+Finalización documentación
+
+
+
+
 
 ## 🛠️ Funcionalidades Incluidas vs. Pospuestas
 
