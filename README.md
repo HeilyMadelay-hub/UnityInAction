@@ -1,200 +1,121 @@
-# UnityInAction - Aplicación de Gestión de Usuarios, Noticias y Donaciones
+# UnityInAction
 
-## 📚 Descripción del Proyecto
-UnityInAction es una plataforma diseñada para facilitar la gestión de usuarios, publicación de noticias y donaciones relacionadas con iniciativas solidarias, voluntariados, organizaciones profesionales o reporterismo ciudadano.
+## 📱 Aplicación de Gestión de Usuarios, Noticias y Donaciones
 
-El objetivo principal es proporcionar un espacio donde diferentes tipos de usuarios (Organizaciones, Voluntarios, Profesionales, Donantes y Reporteros Ciudadanos) puedan:
+## 📝 Descripción del Proyecto
 
-- Registrarse e iniciar sesión.
-- Publicar y visualizar noticias de interés.
-- Gestionar donaciones para apoyar a Organizaciones.
-- Ofrecerse para realizar voluntariados con las Organizaciones.
+UnityInAction es una plataforma Android diseñada para conectar organizaciones solidarias con voluntarios, profesionales y donantes, facilitando la publicación de noticias y gestión de donaciones.
 
-## 🌐 Conectividad
-La aplicación se conecta a servidores remotos de Firebase para:
-- Almacenamiento de datos en tiempo real
-- Autenticación de usuarios
-- Gestión de archivos
-- Envío de notificaciones push
-- Procesamiento de donaciones
+Este README presenta un plan realista para desarrollar la aplicación **en 2.5 meses por una única desarrolladora con primera experiencia en Firebase**.
 
-## ✨ Características Principales
+## 🎯 Objetivos Principales
 
-### Gestión de Usuarios
-- Registro de diferentes tipos de usuarios: Organización, Reportero Ciudadano, Voluntario, Profesional y Donante.
-- Campos específicos para cada tipo de usuario (ej. profesiones, certificados, disponibilidad, datos de pago, etc.).
-- Validación de datos como correo electrónico, nombre y teléfono.
+- Crear una plataforma funcional donde los usuarios puedan conectarse
+- Implementar un sistema de publicación y visualización de noticias
+- Desarrollar un sistema básico de donaciones
+- Aprender e implementar Firebase como solución backend
 
-### Inicio de Sesión
-- Autenticación con correo electrónico y contraseña mediante Firebase Auth.
-- Gestión de sesión activa mediante SharedPreferences.
+## 📅 Cronograma de Desarrollo (2.5 Meses)
 
-### Gestión de Noticias
-- Subida de noticias por usuarios autorizados (Organizaciones, Reporteros).
-- Información detallada: título, contenido, tags, ubicación, requerimientos, etc.
-- Edición y eliminación de noticias propias.
-- Visualización completa de una noticia al seleccionarla mediante ActivityDetalleNoticia.
-- Búsqueda integrada para filtrar noticias por palabras clave.
+### 🚀 Fase 1: Base del Proyecto (Semanas 1-2)
+- [  ] Configuración del entorno de desarrollo Android
+- [  ] Creación y configuración del proyecto en Firebase
+- [  ] Diseño de las pantallas principales (mockups/wireframes)
+- [  ] Implementación de Firebase Authentication básico
+- [  ] Desarrollo de interfaces de registro e inicio de sesión
 
-### Donaciones
-- Los usuarios pueden realizar donaciones a Organizaciones dentro de la aplicación.
-- Se soporta el pago mediante PayPal, lo que permite realizar transacciones seguras y rápidas.
-- El proceso de pago se realiza a través de la API de PayPal, garantizando la seguridad de la información financiera de los usuarios.
-- Se validan los datos de la transacción antes de confirmar la donación.
-- Confirmación instantánea de la donación con notificaciones en tiempo real.
+### 👤 Fase 2: Gestión de Usuarios (Semanas 3-5)
+- [  ] Modelado de datos de usuarios en Firestore
+- [  ] Implementación de perfiles para los 5 tipos de usuarios
+- [  ] Desarrollo de la clase FirestoreHelper 
+- [  ] Interfaz de usuario para visualización/edición de perfiles
+- [  ] Testing de las funcionalidades de autenticación
 
-### Notificaciones Push
-Integración con Firebase Cloud Messaging para enviar notificaciones cuando:
-- Se publica una nueva noticia.
-- Se realiza una donación.
-- Se actualiza una noticia importante.
+### 📰 Fase 3: Sistema de Noticias (Semanas 6-8)
+- [  ] Diseño del modelo de datos para noticias
+- [  ] Desarrollo de la interfaz para crear noticias
+- [  ] Implementación del listado de noticias (RecyclerView + NoticiasAdapter)
+- [  ] Desarrollo de la vista detallada de noticias
+- [  ] Implementación de funcionalidad de búsqueda básica
+- [  ] Testing de las funcionalidades CRUD de noticias
 
-### Seguridad y Autenticación Mejorada
-- Contraseñas encriptadas para mayor seguridad.
-- Autenticación con Google o Facebook.
+### 💰 Fase 4: Sistema de Donaciones (Semanas 9-10)
+- [  ] Integración básica con PayPal SDK (ambiente sandbox)
+- [  ] Implementación de la interfaz de donaciones
+- [  ] Desarrollo del flujo de confirmación de donaciones
+- [  ] Almacenamiento del registro de donaciones en Firestore
+- [  ] Testing del proceso de donación
 
-### Geolocalización y Mapas
-- Filtro de noticias basadas en la ubicación actual del usuario.
-- Visualización de la ubicación de las noticias en un mapa interactivo (Google Maps API).
+### 🔍 Fase 5: Pulido y Finalización (Semana 11)
+- [  ] Revisión general y corrección de bugs
+- [  ] Implementación del tema oscuro
+- [  ] Optimización de rendimiento
+- [  ] Testing final de todas las funcionalidades
+- [  ] Finalización de la documentación
 
-### Tema Oscuro
-- Modo oscuro para mejorar la experiencia del usuario.
+## 🛠️ Funcionalidades Incluidas vs. Pospuestas
 
-## 🗂 Estructura del Proyecto
+### ✅ Incluidas en la Primera Versión
+- Autenticación básica con email/contraseña
+- Perfiles de usuario para los 5 tipos de usuarios
+- CRUD completo de noticias
+- Búsqueda simple de noticias por palabras clave
+- Sistema básico de donaciones con PayPal (sandbox)
+- Tema oscuro/claro
+
+### ⏳ Pospuestas para Versiones Futuras
+- Autenticación con Google/Facebook
+- Notificaciones push (FCM)
+- Geolocalización y mapas
+- Sistema de voluntariados
+- MVP de seguridad con IA
+- Sincronización offline
+- Soporte multi-idioma
+
+## 💻 Estructura del Proyecto
 
 ### Activities Principales
-- ActivityIniciar - Pantalla de inicio de sesión.
-- ActivityRegistrarse - Registro dinámico según tipo de usuario.
-- ActivityPerfilUsuario - Gestión de perfil y noticias propias.
-- ActivityVernoticias - Visualización general de noticias con buscador.
-- ActivityDetalleNoticia - Pantalla para visualizar la información completa de una noticia seleccionada.
-- ActivityDonaciones - Gestión de donaciones.
-- EditarNoticiaActivity - Edición de noticias existentes.
-- MainActivity - Pantalla principal con accesos rápidos.
+- MainActivity - Pantalla principal y navegación
+- ActivityIniciar - Inicio de sesión
+- ActivityRegistrarse - Registro con campos dinámicos
+- ActivityPerfilUsuario - Gestión de perfil
+- ActivityVernoticias - Listado de noticias
+- ActivityDetalleNoticia - Vista detallada de noticia
+- ActivityDonaciones - Gestión de donaciones
 
-### Clases Soporte
-- FirestoreHelper - Gestión de conexiones con Firebase Firestore.
-- NoticiasAdapter - Adaptador para la lista de noticias.
-- Noticia - Modelo de datos para las noticias.
+### Componentes Clave
+- FirestoreHelper.java - Gestión de conexiones a Firestore
+- NoticiasAdapter.java - Adaptador para RecyclerView de noticias
+- Models/ - Clases de modelos de datos (Usuario, Noticia, Donación)
+- Utils/ - Clases de utilidad (validación, formateo, etc.)
 
-## 📊 Arquitectura del Proyecto
-La aplicación sigue una arquitectura cliente-servidor con los siguientes componentes:
-
-### Backend (Servidor Remoto)
-- Firebase Firestore: Base de datos NoSQL en la nube para almacenar usuarios, noticias y donaciones.
-- Firebase Authentication: Gestión de autenticación de usuarios.
-- Firebase Cloud Functions: Lógica de backend para validar donaciones y enviar notificaciones.
-
-### Frontend (Android)
-- Activities y Fragments: Interfaz de usuario en Java/XML.
-- SDK de Firebase: Comunicación con el backend mediante Firestore y Auth.
-
-## 🔧 Requisitos Previos
-
-### Software
-- Android Studio o IDE compatible con Android.
-- Gradle instalado (incluido en Android Studio).
-- Cuenta de Firebase y archivo de configuración google-services.json.
-
-### Dispositivos
-- Android 5.0 (Lollipop) o superior (físico o emulador).
-- Conexión a Internet para acceder a los servicios de Firebase.
-
-## 🚀 Instalación y Ejecución
-
-### Instalación
-1. Clona este repositorio o copia los archivos del proyecto a tu máquina local.
-2. Abre Android Studio.
-3. Selecciona "Open an existing project".
-4. Navega hasta la carpeta del proyecto y selecciónala.
-5. Espera a que Gradle sincronice el proyecto.
-6. Configura Firebase:
-   - Añade el archivo google-services.json al proyecto
-   - Verifica las dependencias de Firebase en build.gradle
-
-### Ejecución
-1. Conecta tu dispositivo Android o inicia un emulador.
-2. Haz clic en el botón "Run" (icono ▶).
-3. Selecciona el dispositivo o emulador deseado.
-4. Una vez compilado, la aplicación se iniciará automáticamente.
-
-## 🔧 Pruebas
-Se han implementado pruebas para garantizar el correcto funcionamiento de la aplicación:
-- Pruebas unitarias: Usando JUnit y Mockito para validar la lógica de negocio.
-- Pruebas de interfaz: Usando Espresso para verificar la navegación y funcionalidad de la UI.
-
-## 🛠️ Seguridad y Mejoras
-- Cifrado de contraseñas: Implementado para evitar almacenamiento en texto plano.
-- Reglas de seguridad en Firestore: Control de acceso granular a los datos.
-- Autenticación multifactor disponible.
-
-## 💡 Mejoras Futuras
-- Incorporar soporte para múltiples idiomas (español e inglés).
-- Optimizar la UI con Jetpack Compose.
-- Implementar sincronización offline para mejorar la experiencia sin conexión.
-
-## MVP de Ciberseguridad con IA
- - Para reforzar la seguridad de la plataforma, se plantea un MVP centrado en dos pilares 
-   fundamentales:
-
-1. Detección de Actividad Sospechosa en Inicios de Sesión
-   
-   Registro de eventos de login: se guardan datos clave en Firestore (usuario, IP, hora).
-   
-   Análisis con IA (Cloud Function):
-   
-      Una Cloud Function recupera los eventos de login y pasa la información por un modelo 
-      ligero de IA (por ejemplo, TensorFlow Lite o scikit-learn).
-      El modelo determina el nivel de riesgo (bajo, medio o alto) en función de patrones de 
-      comportamiento.
-   
-   Medidas de protección:
-   
-      Si se detecta un inicio de sesión de alto riesgo, se activa de forma automática la 
-      autenticación en dos pasos (2FA) o se bloquea temporalmente la cuenta para evitar 
-      accesos no autorizados.
-
-3. Filtro de Contenido en Publicaciones
-   
-   Validación previa de noticias: al subir una nueva noticia, el texto se somete a un modelo 
-   básico de NLP (Naive Bayes o Regresión Logística) que evalúa el contenido para detectar 
-   spam o lenguaje ofensivo.
-   
-   Umbral de aceptación:
-   
-      Si el resultado del análisis supera un determinado nivel de riesgo, la noticia se marca 
-      para revisión manual
-      
-      Si el índice de spam u ofensividad es muy elevado, se rechaza automáticamente para 
-      proteger la calidad de la plataforma.
-      
-      Este MVP de IA ofrece una protección inicial contra usos maliciosos y se implementa de 
-      forma escalable, permitiendo mejoras futuras con más datos y modelos más sofisticados.
-
-## 💻 Tecnologías Utilizadas
+## 🔧 Tecnologías a Utilizar
 
 ### Frontend
-- Java
-- XML (layouts y Material Design)
+- Java para Android
+- XML para layouts
+- Material Design Components
 
-### Backend y Base de Datos (Servidor Remoto)
-Firebase:
-- Firestore: Base de datos NoSQL en la nube
-- Authentication: Gestión de usuarios
-- Cloud Functions: Lógica de servidor
-- Storage: Almacenamiento de archivos
-- FCM: Notificaciones push
-  
-Pasarela de Pago:
-- PayPal API: Procesamiento seguro de donaciones
+### Backend (Firebase)
+- Firestore - Base de datos NoSQL
+- Authentication - Gestión de usuarios
+- Storage - Almacenamiento de imágenes (básico)
 
-### Herramientas de Desarrollo
-- Android Studio
-- Gradle
-- GitHub
-- Espresso, JUnit y Mockito para pruebas
+### Integración de Pago
+- PayPal SDK para Android (modo sandbox)
 
-## 👉 Licencia
-Este proyecto no cuenta con una licencia específica. Se presenta como código abierto para su revisión y mejora.
+## 📚 Recursos de Aprendizaje
+
+### Firebase
+- [Documentación oficial de Firebase para Android](https://firebase.google.com/docs/android/setup)
+- [Codelab: Firebase para Android](https://firebase.google.com/codelabs/firebase-android)
+- [Video tutorial: Firebase Authentication](https://www.youtube.com/watch?v=Z-RE1QuUWPg)
+- [Video tutorial: Cloud Firestore para Android](https://www.youtube.com/watch?v=MILE4PVx1kE)
+
+### PayPal
+- [Guía de integración de PayPal SDK](https://developer.paypal.com/docs/business/checkout/configure-payments/single-page-app/)
+- [PayPal Android SDK en GitHub](https://github.com/paypal/PayPal-Android-SDK)
+
+
 
 
