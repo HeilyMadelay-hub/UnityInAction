@@ -4,148 +4,131 @@
 
 ## 📝 Descripción del Proyecto
 
-UnityInAction es una plataforma Android diseñada para conectar organizaciones solidarias con voluntarios, profesionales y donantes, facilitando la publicación de noticias y gestión de donaciones.
+UnityInAction es una plataforma Android diseñada para conectar organizaciones solidarias con voluntarios, profesionales y donantes, facilitando la publicación de noticias y la gestión de donaciones. La aplicación permite a los usuarios registrarse según su rol, acceder a noticias relevantes y realizar donaciones seguras.
 
-Este README presenta un plan realista para desarrollar la aplicación **en 2.5 meses por una única desarrolladora con primera experiencia en Firebase**.
+Este proyecto está planificado para ser desarrollado en 2 meses por una desarrolladora individual con primera experiencia en Firebase.
 
 ## 🎯 Objetivos Principales
 
-- Crear una plataforma funcional donde los usuarios puedan conectarse
-- Implementar un sistema de publicación y visualización de noticias
-- Desarrollar un sistema básico de donaciones
-- Aprender e implementar Firebase como solución backend
+- Crear una plataforma funcional donde diferentes tipos de usuarios puedan registrarse e iniciar sesión
+- Implementar un sistema básico de publicación y visualización de noticias
+- Desarrollar un sistema simple de donaciones
+- Aplicar Firebase como solución backend (Authentication y Firestore)
+
+## 🛠️ Funcionalidades Incluidas
+
+### 👤 Gestión de Usuarios
+- Sistema de registro con 5 tipos de usuarios: Organización, Voluntario, Profesional, Donante y Reportero Ciudadano
+- Formularios específicos según el tipo de usuario
+- Autenticación con email y contraseña mediante Firebase
+- Perfiles básicos para cada usuario
+
+### 📰 Sistema de Noticias
+- Creación de noticias por usuarios autorizados (Organizaciones y Reporteros)
+- Visualización de lista de noticias con imagen destacada, título y resumen
+- Vista detallada de noticias seleccionadas
+- Funcionalidad básica de búsqueda por palabras clave
+- Edición y eliminación de noticias propias
+
+### 💰 Sistema Básico de Donaciones
+- Formulario simple para realizar donaciones a organizaciones
+- Integración básica con PayPal SDK (modo sandbox)
+- Registro de donaciones en Firestore
+- Confirmación de donación realizada
+
+### 🎨 Interfaz de Usuario
+- Diseño intuitivo basado en Material Design
+- Implementación de tema oscuro/claro
+- Navegación fluida entre pantallas principales
 
 ## 📅 Cronograma de Desarrollo (2 Meses)
 
-## 🚀 Semana 1-2: Base del Proyecto
+### Semanas 1-2: Configuración y Base del Proyecto
+- Configuración del entorno de desarrollo Android
+- Creación y configuración del proyecto en Firebase
+- Diseño de las pantallas principales (wireframes)
+- Implementación de la estructura básica de la aplicación
 
-Configuración entorno Android
+### Semanas 3-4: Autenticación y Gestión de Usuarios
+- Implementación de Firebase Authentication
+- Desarrollo de las pantallas de registro e inicio de sesión
+- Creación de la estructura de datos en Firestore
+- Implementación de perfiles de usuario básicos
 
-Creación/configuración Firebase
+### Semanas 5-6: Sistema de Noticias
+- Modelado de datos para noticias en Firestore
+- Desarrollo de interfaces para crear/editar noticias
+- Implementación del listado de noticias con RecyclerView
+- Desarrollo de la vista detallada de noticias
+- Implementación de búsqueda básica
 
-Mockups básicos de interfaces
+### Semanas 7-8: Sistema de Donaciones y Finalización
+- Integración básica con PayPal SDK (sandbox)
+- Desarrollo del flujo de donaciones
+- Implementación del tema oscuro/claro
+- Testing general y corrección de bugs
+- Documentación final y preparación para entrega
 
-Firebase Authentication básico
-
-Interfaces registro e inicio sesión
-
-## 👤 Semana 3-4: Gestión Usuarios
-
-Modelado datos usuarios (Firestore)
-
-Perfiles de los 5 tipos de usuario
-
-Clase FirestoreHelper
-
-Interfaz visualización/edición perfil
-
-Testing autenticación y perfiles
-
-## 📰 Semana 5-6: Sistema Noticias
-
-Modelo datos noticias (Firestore)
-
-Interfaz creación noticias
-
-RecyclerView + NoticiasAdapter
-
-Vista detallada de noticias
-
-Funcionalidad búsqueda básica
-
-Testing funcionalidades noticias
-
-## 💰 Semana 7: Sistema Donaciones
-
-Integración PayPal SDK (sandbox)
-
-Interfaz básica donaciones
-
-Flujo confirmación donaciones
-
-Registro donaciones en Firestore
-
-Testing donaciones
-
-## 🔍 Semana 8: Pulido y Finalización
-
-Revisión/corrección bugs
-
-Implementación tema oscuro
-
-Optimización rendimiento
-
-Testing final general
-
-Finalización documentación
-
-
-
-
-
-## 🛠️ Funcionalidades Incluidas vs. Pospuestas
-
-### ✅ Incluidas en la Primera Versión
-- Autenticación básica con email/contraseña
-- Perfiles de usuario para los 5 tipos de usuarios
-- CRUD completo de noticias
-- Búsqueda simple de noticias por palabras clave
-- Sistema básico de donaciones con PayPal (sandbox)
-- Tema oscuro/claro
-
-### ⏳ Pospuestas para Versiones Futuras
-- Autenticación con Google/Facebook
-- Notificaciones push (FCM)
-- Geolocalización y mapas
-- Sistema de voluntariados
-- MVP de seguridad con IA
-- Sincronización offline
-- Soporte multi-idioma
-
-## 💻 Estructura del Proyecto
+## 📊 Estructura del Proyecto
 
 ### Activities Principales
-- MainActivity - Pantalla principal y navegación
-- ActivityIniciar - Inicio de sesión
-- ActivityRegistrarse - Registro con campos dinámicos
-- ActivityPerfilUsuario - Gestión de perfil
-- ActivityVernoticias - Listado de noticias
-- ActivityDetalleNoticia - Vista detallada de noticia
-- ActivityDonaciones - Gestión de donaciones
+- `MainActivity` - Pantalla principal con navegación
+- `ActivityIniciar` - Inicio de sesión
+- `ActivityRegistrarse` - Registro de usuarios
+- `ActivityPerfilUsuario` - Visualización y edición de perfil
+- `ActivityVernoticias` - Listado de noticias con búsqueda
+- `ActivityDetalleNoticia` - Vista detallada de noticia seleccionada
+- `ActivityCrearNoticia` - Creación de nuevas noticias
+- `ActivityDonaciones` - Formulario de donaciones
 
-### Componentes Clave
-- FirestoreHelper.java - Gestión de conexiones a Firestore
-- NoticiasAdapter.java - Adaptador para RecyclerView de noticias
-- Models/ - Clases de modelos de datos (Usuario, Noticia, Donación)
-- Utils/ - Clases de utilidad (validación, formateo, etc.)
+### Clases Soporte
+- `FirestoreHelper` - Gestión de conexiones con Firestore
+- `NoticiasAdapter` - Adaptador para RecyclerView de noticias
+- `Modelos` - Clases para datos (Usuario, Noticia, Donación)
+- `Utils` - Clases de utilidad para validaciones y formateos
 
-## 🔧 Tecnologías a Utilizar
+## 💻 Tecnologías a Utilizar
 
 ### Frontend
 - Java para Android
 - XML para layouts
 - Material Design Components
 
-### Backend (Firebase)
-- Firestore - Base de datos NoSQL
-- Authentication - Gestión de usuarios
-- Storage - Almacenamiento de imágenes (básico)
+### Backend
+- Firebase Authentication para gestión de usuarios
+- Firebase Firestore como base de datos NoSQL
+- Firebase Storage (básico) para almacenamiento de imágenes
 
-### Integración de Pago
+### Integración de Pagos
 - PayPal SDK para Android (modo sandbox)
+
+## 🔮 Funcionalidades para Futuras Versiones
+
+Las siguientes funcionalidades quedan fuera del alcance actual del proyecto (2 meses) y se implementarán en versiones futuras:
+
+- Autenticación con Google/Facebook
+- Sistema de notificaciones push con Firebase Cloud Messaging
+- Geolocalización y mapas
+- Sistema avanzado de voluntariados
+- Características de seguridad avanzadas
+- Sincronización offline
+- Soporte multi-idioma
+
+## 📋 Requisitos de Desarrollo
+
+- Android Studio
+- JDK 8 o superior
+- Dispositivo Android con API 21 (Lollipop) o superior
+- Cuenta de Firebase
+- Cuenta de desarrollador de PayPal (para modo sandbox)
 
 ## 📚 Recursos de Aprendizaje
 
 ### Firebase
 - [Documentación oficial de Firebase para Android](https://firebase.google.com/docs/android/setup)
 - [Codelab: Firebase para Android](https://firebase.google.com/codelabs/firebase-android)
-- [Video tutorial: Firebase Authentication](https://www.youtube.com/watch?v=Z-RE1QuUWPg)
-- [Video tutorial: Cloud Firestore para Android](https://www.youtube.com/watch?v=MILE4PVx1kE)
 
 ### PayPal
 - [Guía de integración de PayPal SDK](https://developer.paypal.com/docs/business/checkout/configure-payments/single-page-app/)
-- [PayPal Android SDK en GitHub](https://github.com/paypal/PayPal-Android-SDK)
-
-
 
 
