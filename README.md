@@ -16,7 +16,7 @@ UnityInAction facilita la publicación de noticias sobre iniciativas solidarias 
 
 ## 🛠️ Tecnologías utilizadas
 
-* **Frontend**: Java, XML, Material Design Components
+* **Frontend**: Java, XML, Material Design 3
 * **Backend**: Firebase (Authentication, Firestore, Storage)
 * **Pagos**: PayPal SDK para Android (modo sandbox)
 
