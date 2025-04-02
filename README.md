@@ -48,8 +48,6 @@ org.meicode.tfg.src/
 
 ## 🔮 Funcionalidades futuras
 
-* Autenticación con Google/Facebook
-* Notificaciones push
 * Geolocalización y mapas
 * Sincronización offline
 * Soporte multi-idioma
