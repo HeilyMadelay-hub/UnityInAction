@@ -1,4 +1,4 @@
-# WorlHelp - Plataforma de Gestión Social
+# WorldHelp - Plataforma de Gestión Social
 
 Aplicación Android que conecta organizaciones solidarias con voluntarios y donantes, permitiendo la publicación de noticias y gestión de donaciones.
 
