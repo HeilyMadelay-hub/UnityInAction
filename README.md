@@ -9,7 +9,7 @@ UnityInAction es una plataforma móvil donde diferentes tipos de usuarios pueden
 - Publicar y visualizar noticias de interés social
 - Realizar donaciones a través de PayPal
 - Recibir notificaciones push en tiempo real
-- Acceder a reportes y análisis avanzados
+- Acceder a un sistemas dee reportes y análisis básicos
 
 ## 🚀 Características
 
