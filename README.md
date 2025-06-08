@@ -4,7 +4,7 @@ Aplicación Android que conecta organizaciones solidarias con voluntarios y dona
 
 ## 📱 Descripción
 
-UnityInAction es una plataforma móvil donde diferentes tipos de usuarios pueden:
+Es una plataforma móvil donde diferentes tipos de usuarios pueden:
 - Registrarse como Organización, Voluntario, Profesional, Donante o Reportero Ciudadano (email o redes sociales)
 - Publicar y visualizar noticias de interés social
 - Realizar donaciones a través de PayPal
