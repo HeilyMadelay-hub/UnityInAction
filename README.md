@@ -59,7 +59,7 @@ app/
 ## 📂 Estructura del Proyecto
 
 ```
-UnityInAction/
+WorldHelp/
 ├── app/                    # Aplicación Android
 │   ├── ui/
 │   │   ├── activities/     # Pantallas principales
@@ -270,8 +270,8 @@ public abstract class UiState {
 ## 👨‍💻 Autor
 
 **Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [tu-perfil](https://linkedin.com/in/tu-perfil)
+- GitHub: [HeilyMadelay-Hub](https://github.com/tu-usuario)
+- LinkedIn: [Heily Madelay Tandazo](https://www.linkedin.com/in/heilymajtan/)
 
 ---
 
