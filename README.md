@@ -1,5 +1,8 @@
 # WorldHelp - Plataforma de Gestión Social
 
+> 🎯 **Proyecto Portfolio**: Demo técnica para mostrar habilidades en desarrollo Android y Spring Boot. 
+> Incluye datos de prueba y está optimizado para demostración, no para uso en producción.
+
 Aplicación Android que conecta organizaciones solidarias con voluntarios y donantes, permitiendo la publicación de noticias y gestión de donaciones.
 
 ## 📱 Descripción
@@ -322,7 +325,3 @@ public abstract class UiState {
 
 - GitHub: [@HeilyMadelay-Hub](https://github.com/HeilyMadelay-Hub)
 - LinkedIn: [Heily Madelay Tandazo](https://linkedin.com/in/heily-madelay-tandazo)
-
----
-
-Proyecto desarrollado como parte de mi portfolio profesional para demostrar competencias en desarrollo Android y backend con Java/Spring Boot.
