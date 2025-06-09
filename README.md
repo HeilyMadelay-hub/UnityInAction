@@ -5,18 +5,26 @@ Aplicación Android que conecta organizaciones solidarias con voluntarios y dona
 ## 📱 Descripción
 
 Es una plataforma móvil donde diferentes tipos de usuarios pueden:
+
 - Registrarse como Organización, Voluntario, Profesional, Donante o Reportero Ciudadano (email o redes sociales)
 - Publicar y visualizar noticias de interés social
 - Realizar donaciones a través de PayPal
 - Recibir notificaciones push en tiempo real
-- Acceder a un sistemas dee reportes y análisis básicos
+- Acceder a un sistema de reportes y análisis básicos
+- Comunicarse a través del sistema de mensajería integrado
+- Participar en el sistema de gamificación y reconocimientos
 
 ## 🚀 Características
 
 ### App Android
+
 - **Autenticación** con Firebase Auth (email/contraseña y redes sociales)
 - **Perfiles diferenciados** según tipo de usuario
 - **Gestión de noticias** con búsqueda y filtros
+- **Sistema de comentarios** en noticias con moderación
+- **Chat integrado** para comunicación entre organizaciones y voluntarios
+- **Sistema de favoritos** para guardar noticias y organizaciones
+- **Compartir en redes sociales** las noticias
 - **Donaciones** integradas con PayPal
 - **Notificaciones push** con Firebase Cloud Messaging
 - **Geolocalización** para filtrar contenido cercano
@@ -25,11 +33,28 @@ Es una plataforma móvil donde diferentes tipos de usuarios pueden:
 - **Sistema de reportes avanzado**
 - **Dashboard analítico** para organizaciones
 
+#### Sistema de Gamificación
+- **Puntos** por participación y actividades
+- **Badges** y logros desbloqueables
+- **Ranking** de voluntarios más activos
+- **Sistema de reconocimientos** públicos
+
+#### Modo Offline
+- Lectura de noticias guardadas
+- Visualización de perfiles en caché
+- Acceso a mensajes descargados
+- Guardado de borradores de publicaciones
+- Sincronización automática al recuperar conexión
+
 ### API Backend (Spring Boot)
+
 - **REST API** para gestión de datos
 - **Firebase Admin SDK** para sincronización
 - **Sistema de notificaciones** automatizado
 - **Validación** de organizaciones
+- **Gestión de chat** y mensajes
+- **Moderación de contenido** (comentarios)
+- **Sistema de puntuación** para gamificación
 
 ## 🛠 Tecnologías
 
@@ -39,6 +64,8 @@ Es una plataforma móvil donde diferentes tipos de usuarios pueden:
 - **Notificaciones**: Firebase Cloud Messaging (FCM)
 - **Pagos**: PayPal SDK
 - **Mapas**: Google Maps API
+- **Chat**: Firebase Realtime Database
+- **Cache**: Room Database (offline support)
 
 ## 🏗 Arquitectura
 
@@ -48,12 +75,15 @@ Patrón **MVVM** para separación de responsabilidades y mejor testabilidad. Los
 app/
 ├── ui/
 │   ├── activities/     # Views
-│   └── viewmodels/     # ViewModels con LiveData
+│   ├── viewmodels/     # ViewModels con LiveData
+│   └── fragments/      # Fragments reutilizables
 ├── data/
 │   ├── repository/     # Repository pattern
+│   ├── local/          # Room Database para offline
 │   └── remote/         # Firebase/API calls
 └── domain/
-    └── model/          # Modelos de negocio
+    ├── model/          # Modelos de negocio
+    └── usecase/        # Casos de uso
 ```
 
 ## 📂 Estructura del Proyecto
@@ -63,18 +93,23 @@ WorldHelp/
 ├── app/                    # Aplicación Android
 │   ├── ui/
 │   │   ├── activities/     # Pantallas principales
+│   │   ├── fragments/      # Fragmentos reutilizables
 │   │   ├── viewmodels/     # ViewModels con LiveData
 │   │   └── adapters/       # Adaptadores RecyclerView
 │   ├── data/
 │   │   ├── repository/     # Repository pattern
+│   │   ├── local/          # Room database
 │   │   └── remote/         # Firebase/API calls
 │   ├── domain/
-│   │   └── model/          # Modelos de negocio
-│   └── services/           # Firebase Messaging
-├── backend/               # API Spring Boot (opcional)
-│   ├── controller/        # Endpoints REST
-│   ├── service/          # Lógica de negocio
-│   └── config/           # Configuración Firebase
+│   │   ├── model/          # Modelos de negocio
+│   │   └── usecase/        # Casos de uso
+│   ├── services/           # Firebase Messaging, Sync
+│   └── utils/              # Utilidades y helpers
+├── backend/                # API Spring Boot
+│   ├── controller/         # Endpoints REST
+│   ├── service/           # Lógica de negocio
+│   ├── repository/        # Acceso a datos
+│   └── config/            # Configuración Firebase
 └── README.md
 ```
 
@@ -84,18 +119,20 @@ WorldHelp/
 - JDK 11+
 - Cuenta Firebase
 - Cuenta PayPal Developer (para pruebas)
+- API Key de Google Maps
 
 ## ⚡ Instalación
 
 ### 1. Clonar repositorio
 ```bash
-git clone https://github.com/tu-usuario/UnityInAction.git
+git clone https://github.com/tu-usuario/WorldHelp.git
 ```
 
 ### 2. Configurar Firebase
-1. Crear proyecto en [Firebase Console](https://console.firebase.google.com)
+1. Crear proyecto en [Firebase Console](https://console.firebase.google.com/)
 2. Descargar `google-services.json`
 3. Colocarlo en `app/google-services.json`
+4. Habilitar Authentication, Firestore, Realtime Database y Storage
 
 ### 3. Configurar API Backend (opcional)
 ```bash
@@ -112,11 +149,14 @@ cd backend
 ## 📱 Pantallas Principales
 
 - **Login/Registro**: Autenticación con email/contraseña o redes sociales
-- **Feed de Noticias**: Lista de publicaciones con buscador
-- **Detalle Noticia**: Información completa y opciones
-- **Perfil**: Gestión de cuenta y noticias propias
+- **Feed de Noticias**: Lista de publicaciones con buscador, filtros y comentarios
+- **Detalle Noticia**: Información completa, comentarios y opciones para compartir
+- **Perfil**: Gestión de cuenta, noticias propias, badges y puntos
+- **Chat**: Mensajería entre organizaciones y voluntarios
+- **Favoritos**: Noticias y organizaciones guardadas
 - **Donaciones**: Integración con PayPal
 - **Dashboard Analítico**: Métricas y reportes para organizaciones
+- **Ranking**: Tabla de voluntarios más activos
 
 ## 🔔 Sistema de Notificaciones
 
@@ -124,6 +164,7 @@ cd backend
 1. Usuario publica noticia → Se guarda en Firestore
 2. Backend detecta nueva noticia → Envía notificación FCM
 3. Usuarios reciben push notification en tiempo real
+4. Notificaciones de chat, comentarios y gamificación
 
 ### Endpoints API
 ```
@@ -131,6 +172,10 @@ POST /api/noticias          - Crear noticia
 GET  /api/noticias          - Listar noticias
 POST /api/notificaciones    - Enviar notificación
 PUT  /api/usuarios/{id}/fcmToken - Actualizar token
+POST /api/comentarios       - Crear comentario
+GET  /api/chat/mensajes     - Obtener mensajes
+POST /api/chat/enviar       - Enviar mensaje
+GET  /api/ranking           - Obtener ranking voluntarios
 ```
 
 ## 🧪 Testing
@@ -138,7 +183,7 @@ PUT  /api/usuarios/{id}/fcmToken - Actualizar token
 **Coverage**: 65% en ViewModels y Repositories
 
 ### Unit Tests
-```kotlin
+```java
 // Ejemplo: Test de ViewModel
 @Test
 fun `when login succeeds, navigate to home`() {
@@ -155,7 +200,7 @@ fun `when login succeeds, navigate to home`() {
 
 ### Testing por Componente
 - **Unit Tests**: ViewModels y Repositories con test doubles
-- **UI Tests**: Flujos principales (login, crear noticia, donar)
+- **UI Tests**: Flujos principales (login, crear noticia, donar, chat)
 - **Test Doubles**: Fake repositories para aislamiento
 
 ```bash
@@ -170,9 +215,11 @@ fun `when login succeeds, navigate to home`() {
 ## 🚀 Optimizaciones
 
 ### Performance
-- **Paginación** en lista de noticias (20 items por página)
-- **Caché de imágenes** con Glide
-- **Lazy loading** en RecyclerViews
+- Paginación en lista de noticias (20 items por página)
+- Caché de imágenes con Glide
+- Lazy loading en RecyclerViews
+- Caché local con Room para modo offline
+- Sync incremental para reducir uso de datos
 
 ### Manejo de Estados
 ```java
@@ -259,9 +306,11 @@ public abstract class UiState {
 
 ## 🔐 Seguridad
 
-- **ProGuard** configurado para ofuscar código
-- **SSL Pinning** en llamadas a API críticas
-- **Validación** de inputs en cliente y servidor
+- ProGuard configurado para ofuscar código
+- SSL Pinning en llamadas a API críticas
+- Validación de inputs en cliente y servidor
+- Moderación de contenido (comentarios y chat)
+- Autenticación de dos factores para organizaciones
 
 ## 📸 Screenshots
 
@@ -269,9 +318,10 @@ public abstract class UiState {
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**
-- GitHub: [HeilyMadelay-Hub](https://github.com/HeilyMadelay-hub)
-- LinkedIn: [Heily Madelay Tandazo](https://www.linkedin.com/in/heilymajtan/)
+**Heily Madelay Tandazo**
+
+- GitHub: [@HeilyMadelay-Hub](https://github.com/HeilyMadelay-Hub)
+- LinkedIn: [Heily Madelay Tandazo](https://linkedin.com/in/heily-madelay-tandazo)
 
 ---
 
