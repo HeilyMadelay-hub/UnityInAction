@@ -270,7 +270,7 @@ public abstract class UiState {
 ## 👨‍💻 Autor
 
 **Tu Nombre**
-- GitHub: [HeilyMadelay-Hub](https://github.com/tu-usuario)
+- GitHub: [HeilyMadelay-Hub](https://github.com/HeilyMadelay-hub)
 - LinkedIn: [Heily Madelay Tandazo](https://www.linkedin.com/in/heilymajtan/)
 
 ---
