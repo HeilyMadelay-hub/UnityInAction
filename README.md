@@ -1,8 +1,5 @@
 # WorldHelp - Plataforma de Gestión Social
 
-> 🎯 **Proyecto Portfolio**: Demo técnica para mostrar habilidades en desarrollo web full-stack con React y Spring Boot.
-Incluye datos de prueba y está optimizado para demostración, no para uso en producción.
-
 ## 📱 Descripción
 
 Aplicación web que conecta organizaciones solidarias con voluntarios y donantes, permitiendo la publicación de noticias y gestión de donaciones.
