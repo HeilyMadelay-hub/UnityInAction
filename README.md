@@ -1,7 +1,7 @@
 # WorldHelp - Plataforma de Gestión Social
+📱 **Descripción**
 
-## 📱 Descripción
-Aplicación web que conecta organizaciones solidarias con voluntarios y donantes, permitiendo la publicación de noticias y gestión de donaciones.
+Aplicación web que conecta organizaciones solidarias con voluntarios y donantes, permitiendo la publicación de noticias y gestión de donaciones. **Potenciada con IA para maximizar el impacto social.**
 
 Es una plataforma web responsive donde diferentes tipos de usuarios pueden:
 
@@ -16,31 +16,33 @@ Es una plataforma web responsive donde diferentes tipos de usuarios pueden:
 - Búsqueda y filtrado avanzado de contenido
 - Perfiles personalizados por tipo de usuario
 - Dashboard analítico para organizaciones
+- **🤖 Asistente IA integrado para recomendaciones personalizadas**
 
-## 🛠 Stack Tecnológico
+## 🛠 **Stack Tecnológico**
 
 ### Frontend
-- **Core**: React 18.2 + JavaScript
-- **UI**: Material-UI v5
-- **Routing**: React Router v6
-- **Real-time**: Socket.io Client
-- **HTTP**: Axios
-- **Visualización**: Chart.js
+- **Core:** React 18.2 + JavaScript
+- **UI:** Material-UI v5
+- **Routing:** React Router v6
+- **Real-time:** Socket.io Client
+- **HTTP:** Axios
+- **Visualización:** Chart.js
 
 ### Backend
-- **Framework**: Spring Boot 3.2
-- **Seguridad**: Spring Security + JWT
-- **WebSocket**: Spring WebSocket
-- **Base de Datos**: PostgreSQL con Spring Data JPA
-- **Almacenamiento**: Firebase Storage (imágenes y archivos)
-- **Pagos**: PayPal SDK
-- **Docs**: Swagger/OpenAPI 3.0
+- **Framework:** Spring Boot 3.2
+- **Seguridad:** Spring Security + JWT
+- **WebSocket:** Spring WebSocket
+- **Base de Datos:** PostgreSQL con Spring Data JPA
+- **Almacenamiento:** Firebase Storage (imágenes y archivos)
+- **Pagos:** PayPal SDK
+- **Docs:** Swagger/OpenAPI 3.0
+- **🤖 IA:** Google Gemini API
 
 ### DevOps & Tools
-- **Contenedores**: Docker + Docker Compose
-- **Base de Datos**: PostgreSQL 15
+- **Contenedores:** Docker + Docker Compose
+- **Base de Datos:** PostgreSQL 15
 
-## 🏗 Arquitectura
+## 🏗 **Arquitectura**
 
 ### Frontend - Estructura
 ```
@@ -52,7 +54,8 @@ frontend/
 │   ├── services/       # Servicios API y WebSocket
 │   ├── hooks/          # Custom hooks
 │   ├── utils/          # Utilidades
-│   └── contexts/       # Context API para estado global
+│   ├── contexts/       # Context API para estado global
+│   └── ai/             # 🤖 Servicios de IA
 ```
 
 ### Backend - Arquitectura MVC
@@ -67,10 +70,11 @@ backend/
 │   ├── security/       # Configuración JWT
 │   ├── websocket/      # WebSocket handlers
 │   ├── exception/      # Manejo de excepciones
-│   └── util/           # Utilidades
+│   ├── util/           # Utilidades
+│   └── ai/             # 🤖 Servicios de IA
 ```
 
-## 🚀 Características
+## 🚀 **Características**
 
 ### Frontend (React)
 - SPA moderna con React 18
@@ -81,6 +85,7 @@ backend/
 - Chat en tiempo real con Socket.io
 - Modo oscuro con persistencia
 - Gráficos y analytics con Chart.js
+- **🤖 Chatbot asistente integrado**
 
 ### Backend (Spring Boot)
 - REST API con Spring Boot 3.2
@@ -92,6 +97,7 @@ backend/
 - Búsqueda avanzada con criterios dinámicos
 - Documentación con Swagger/OpenAPI 3.0
 - Scheduled tasks para reportes automáticos
+- **🤖 Motor de recomendaciones con IA**
 
 ### Sistema de Gamificación
 - Puntos por participación y actividades
@@ -99,53 +105,81 @@ backend/
 - Ranking de voluntarios más activos
 - Sistema de niveles con beneficios
 
-### Características Destacadas
-1. **Chat en Tiempo Real**
-   - WebSocket bidireccional
-   - Salas por organización
-   - Historial persistente
+## 🤖 **Funcionalidades de IA**
 
-2. **Sistema de Donaciones**
-   - Integración completa PayPal
-   - Tracking de conversiones
-   - Reportes financieros
+### **Recomendaciones Inteligentes**
+- **Para Voluntarios:** IA analiza perfil, habilidades y ubicación → recomienda organizaciones compatibles
+- **Para Organizaciones:** IA analiza proyectos y necesidades → sugiere voluntarios ideales
+- **Matching Automático:** Algoritmo conecta automáticamente perfiles afines
 
-3. **Analytics Dashboard**
-   - Métricas en tiempo real
-   - Gráficos interactivos con Chart.js
+### **Generación Automática de Contenido**
+- **Descripciones de Proyectos:** IA genera textos atractivos para iniciativas solidarias
+- **Posts para Redes Sociales:** IA crea contenido optimizado para difusión en redes
+- **Templates de Campañas:** IA sugiere estructuras efectivas para campañas de donación
 
-## 📱 Páginas y Funcionalidades
+### **Chatbot Asistente**
+- **Para Voluntarios:** Consultas sobre oportunidades, requisitos, ubicaciones
+- **Para Organizaciones:** Asesoría sobre gestión de voluntarios y mejores prácticas
+- **Disponible 24/7:** Respuestas inmediatas a preguntas frecuentes
+
+### **Analytics Predictivos**
+- **Predicción de Éxito:** IA analiza patrones históricos → predice qué campañas tendrán mayor impacto
+- **Optimización de Donaciones:** IA identifica mejores momentos y estrategias para solicitar donaciones
+- **Insights Personalizados:** Recomendaciones específicas para cada organización
+
+## **Características Destacadas**
+
+### Chat en Tiempo Real
+- WebSocket bidireccional
+- Salas por organización
+- Historial persistente
+- **🤖 Moderación automática con IA**
+
+### Sistema de Donaciones
+- Integración completa PayPal
+- Tracking de conversiones
+- Reportes financieros
+- **🤖 Predicción de tendencias de donación**
+
+### Analytics Dashboard
+- Métricas en tiempo real
+- Gráficos interactivos con Chart.js
+- **🤖 Insights automáticos generados por IA**
+
+## 📱 **Páginas y Funcionalidades**
 
 ### Públicas
-- Landing: Página de inicio con estadísticas
-- Explorar: Feed de noticias públicas
-- Organizaciones: Directorio de ONGs
-- Login/Registro: Con email
+- **Landing:** Página de inicio con estadísticas
+- **Explorar:** Feed de noticias públicas
+- **Organizaciones:** Directorio de ONGs
+- **Login/Registro:** Con email
 
 ### Autenticadas
-- Dashboard: Panel personalizado por rol
-- Noticias: CRUD completo con editor rich text
-- Chat: Mensajería en tiempo real
-- Donaciones: Integración con PayPal
-- Perfil: Gestión de cuenta y achievements
-- Rankings: Leaderboard de voluntarios
+- **Dashboard:** Panel personalizado por rol con **recomendaciones IA**
+- **Noticias:** CRUD completo con editor rich text + **generación automática IA**
+- **Chat:** Mensajería en tiempo real + **asistente IA**
+- **Donaciones:** Integración con PayPal + **analytics predictivos**
+- **Perfil:** Gestión de cuenta y achievements
+- **Rankings:** Leaderboard de voluntarios
 
-## 🔐 Seguridad Implementada
+## 🔐 **Seguridad Implementada**
 - JWT con refresh tokens (15min/7días)
 - CORS configurado estrictamente
 - Input validation en todos los endpoints
 - SQL injection prevención con JPA
 - CSRF protection
 - Bcrypt para hash de contraseñas
+- **🤖 Validación de contenido generado por IA**
 
-## 📊 Performance
+## 📊 **Performance**
 - Lazy loading de componentes
 - Image optimization con Firebase Storage
 - Database indexing optimizado
 - Connection pooling configurado
 - Pagination en todas las listas
+- **🤖 Cache inteligente para recomendaciones IA**
 
-## 📋 Requisitos
+## 📋 **Requisitos**
 - Node.js 18+ y npm
 - Java 17+ (OpenJDK recomendado)
 - PostgreSQL 14+
@@ -153,8 +187,9 @@ backend/
 - Docker & Docker Compose
 - PayPal Developer Account (para donaciones)
 - Firebase Account (para storage)
+- **🤖 Google Gemini API Key**
 
-## ⚡ Instalación
+## ⚡ **Instalación**
 
 ### 1. Clonar repositorio
 ```bash
@@ -181,6 +216,7 @@ cp src/main/resources/application.yml.example src/main/resources/application.yml
 # - PayPal API
 # - JWT Secret
 # - Firebase credentials
+# - 🤖 Google Gemini API Key
 
 # Ejecutar con Maven
 ./mvnw clean install
@@ -201,6 +237,7 @@ cp .env.example .env.local
 # REACT_APP_API_URL=http://localhost:8080/api
 # REACT_APP_WS_URL=ws://localhost:8080/ws
 # REACT_APP_PAYPAL_CLIENT_ID=your-paypal-client-id
+# 🤖 REACT_APP_GEMINI_API_KEY=your-gemini-api-key
 
 # Ejecutar en desarrollo
 npm start
@@ -216,7 +253,7 @@ docker-compose up -d
 # Swagger: http://localhost:8080/swagger-ui
 ```
 
-## 🔌 API Endpoints Principales
+## 🔌 **API Endpoints Principales**
 
 ### Autenticación
 ```
@@ -236,6 +273,14 @@ DELETE /api/news/{id}         - Eliminar
 POST   /api/news/{id}/like    - Like/unlike
 ```
 
+### 🤖 **IA Endpoints**
+```
+POST   /api/ai/recommendations - Obtener recomendaciones
+POST   /api/ai/generate-content - Generar contenido
+POST   /api/ai/chat           - Chatbot asistente
+GET    /api/ai/analytics      - Analytics predictivos
+```
+
 ### Chat (WebSocket)
 ```
 CONNECT /ws/chat              - Conectar al chat
@@ -250,7 +295,7 @@ POST   /api/donations/capture  - Capturar pago
 GET    /api/donations/history  - Historial
 ```
 
-## 🧪 Testing
+## 🧪 **Testing**
 
 ### Backend
 ```bash
@@ -264,7 +309,7 @@ GET    /api/donations/history  - Historial
 npm test
 ```
 
-## 📦 Scripts Útiles
+## 📦 **Scripts Útiles**
 
 ### Development
 ```bash
@@ -278,28 +323,26 @@ npm run dev:all
 npm start
 ```
 
-## 🐳 Docker
-```yaml
-# Stack incluye:
+## 🐳 **Docker**
+Stack incluye:
 - PostgreSQL 15 con volumen persistente
 - Backend Spring Boot
 - Frontend React
-```
 
-## 📸 Screenshots
-[Incluir 3-4 capturas de pantalla de la app]
+## 📸 **Screenshots**
+[Incluir 3-4 capturas de pantalla de la app mostrando las funcionalidades de IA]
 
-## 👨‍💻 Autor
+## 👨‍💻 **Autor**
 **Heily Madelay Tandazo**
 
-- GitHub: [@HeilyMadelay-Hub](https://github.com/HeilyMadelay-Hub)
-- LinkedIn: [Heily Madelay Tandazo](https://linkedin.com/in/heily-madelay-tandazo)
+- GitHub: @HeilyMadelay-Hub
+- LinkedIn: Heily Madelay Tandazo
 
----
-
-💡 Proyecto desarrollado para demostrar competencias en:
+## 💡 **Proyecto desarrollado para demostrar competencias en:**
 - Desarrollo Full Stack con React y Spring Boot
+- **Integración de IA para impacto social**
 - Integración de sistemas de pago
 - Comunicación en tiempo real
 - Arquitectura MVC y buenas prácticas
 - Integración con servicios cloud (Firebase)
+- **Machine Learning aplicado a voluntariado**
